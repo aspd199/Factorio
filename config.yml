@@ -1,0 +1,4 @@
+deploy:
+  type: git
+  repository: https://github.com/aspd199/Factorio.git
+  branch: gh-pages
